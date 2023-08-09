@@ -11,6 +11,10 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
+body{
+  background-color: rgb(0, 0, 0);
+}
+
 /* START: General styles */
 .max-width {
   @apply max-w-[1440px] mx-auto;
@@ -43,11 +47,11 @@
 }
 
 .hero__title {
-  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+  @apply 2xl:text-[72px] text-white sm:text-[64px] text-[50px] font-extrabold;
 }
 
 .hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+  @apply text-[27px] text-white font-light mt-5;
 }
 
 .hero__image-container {
