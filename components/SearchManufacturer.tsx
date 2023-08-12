@@ -1,14 +1,19 @@
 "use client";
 import { useState, Fragment } from 'react';
 import  Image  from 'next/image';
-import { SearchManufacturerProps } from '@/types'
-import { Combobox, Transition } from '@headlessui/react'
+import { SearchManufacturerProps } from '@/types';
+import { Combobox, Transition } from '@headlessui/react';
+import { manufacturers } from '@/constants';
 
 const SearchManifacturer = ({manufacturer, setManifacturer}: SearchManufacturerProps ) => {
-    function setQuery(value: string): void {
-        throw new Error('Function not implemented.');
-    }
-
+    const [query, setQuery] = useState('');
+    const filteredManufacturers = query === "" 
+    ? manufacturers 
+    : manufacturers.filter((item) => (
+        item.toLowerCase()
+        .replace(/\s+/g, "")
+        .includes(query.toLocaleLowerCase().replace(/\s+/g, ""))
+    ))
     return (
         <div className='search-manufacturer'>
             <Combobox>
@@ -23,7 +28,7 @@ const SearchManifacturer = ({manufacturer, setManifacturer}: SearchManufacturerP
                         />
                     </Combobox.Button>
                     <Combobox.Input 
-                        className="search-manufacturer__input"
+                        className="search-manufacturer__input border"
                         placeholder='Iphone'
                         displayValue={(manufacturer: string) => manufacturer}
                         onChange={(e) => setQuery(e.target.value)}
@@ -37,7 +42,7 @@ const SearchManifacturer = ({manufacturer, setManifacturer}: SearchManufacturerP
                         afterLeave={() => setQuery('')}
                     >
                         <Combobox.Options>
-                            
+
                         </Combobox.Options>
                     </Transition>
                 </div>

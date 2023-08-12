@@ -5,7 +5,7 @@ const Hero = () => {
     const handleScroll = () => { }
     return (
         <div className='hero'>
-            <div className='flex-1 pt-36 pl-28'>
+            <div className='flex-1 pt-36 pl-28 sm:pr-28'>
                 <h1 className='hero__title'>
                     FutureTech Store: Explore the Latest Gadgets and Gizmos!
                 </h1>
@@ -22,7 +22,7 @@ const Hero = () => {
             </div>
             <div className='hero__image-container'>
                 <div className='hero__image'>
-                    <img className="mt-60 object-contain" src=" /hero.jpg" alt='hero'/>
+                    <img className="mt-60 object-contain mr-5" src=" /hero.jpg" alt='hero'/>
                 </div>
             </div>
         </div>

@@ -206,7 +206,7 @@ body{
 }
 
 .search-manufacturer__input {
-  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-black-100 cursor-pointer text-sm;
+  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-black cursor-pointer text-sm focus:outline-none focus:ring focus:border-cyan-500;
 }
 
 .search-manufacturer__options {
