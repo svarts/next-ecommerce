@@ -29,7 +29,7 @@ const SearchManifacturer = ({manufacturer, setManifacturer}: SearchManufacturerP
                     </Combobox.Button>
                     <Combobox.Input 
                         className="search-manufacturer__input border"
-                        placeholder='Iphone'
+                        placeholder='Apple'
                         displayValue={(manufacturer: string) => manufacturer}
                         onChange={(e) => setQuery(e.target.value)}
                     />
@@ -41,9 +41,29 @@ const SearchManifacturer = ({manufacturer, setManifacturer}: SearchManufacturerP
                         leaveTo="opacity-0"
                         afterLeave={() => setQuery('')}
                     >
+                    <div className='bg-gray-500 bg-opacity-20 rounded-lg shadow-lg backdrop-blur-md border border-gray-500 border-opacity-30'>
                         <Combobox.Options>
-
+                            {filteredManufacturers.length === 0 && 
+                            query !== '' ? (
+                                <Combobox.Option
+                                    value={query}
+                                    className="search-manifacturer__option text-white"
+                                >
+                                    Create "{query}"
+                                </Combobox.Option>
+                            ): (
+                                filteredManufacturers.map((item) => (
+                                    <Combobox.Option
+                                    value={item}
+                                    key={item}
+                                    className={({active}) => `relative search-manifacturer__option ${active ? 'bg-cyan-600 text-white' : 'text-gray-100'}`}
+                                    >
+                                        {item}
+                                    </Combobox.Option>
+                                ))
+                        )}
                         </Combobox.Options>
+                    </div>
                     </Transition>
                 </div>
             </Combobox>
