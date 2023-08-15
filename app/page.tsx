@@ -1,4 +1,4 @@
-import { CustomFilter, Hero, SearchBar } from "@/components" 
+import { CustomFilter, Hero, PhoneCard, SearchBar } from "@/components" 
 import { fetchPhones } from "@/utils"
 
 export default async function Home() {
@@ -26,8 +26,10 @@ export default async function Home() {
         </div>
 
         {!isDataEmpty ? (
-          <section className="text-white">
-            We Have Phones
+          <section className="text-white home__cars-wrapper">
+            {allPhones?.map((phone) => (
+              <PhoneCard phone = {phone}/>
+            ))}
           </section>
         ): (
           <div>
