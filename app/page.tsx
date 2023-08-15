@@ -26,7 +26,7 @@ export default async function Home() {
         </div>
 
         {!isDataEmpty ? (
-          <section>
+          <section className="text-white">
             We Have Phones
           </section>
         ): (
