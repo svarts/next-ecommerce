@@ -11,7 +11,14 @@ interface PhoneCardProps {
 const PhoneCard = ({ phone }: PhoneCardProps) => {
     const { image, title, price, year } = phone;
     return (
-        <div>PhoneCard</div>
+        <div className='car-card group'>
+            <div className='car-car__content'>
+                <img src={image} alt=""/>
+                <h2 className=''>
+                    {title}
+                </h2>
+            </div>
+        </div>
     )
 }
 
