@@ -13,11 +13,16 @@ const PhoneCard = ({ phone }: PhoneCardProps) => {
     return (
         <div className='car-card group'>
             <div className='car-car__content'>
-                <img src={image} alt=""/>
-                <h2 className=''>
+                <img src={image} className="ml-20" width={120} height={120} alt="data-image"/>
+                <h2 className='car-card__content-title '>
                     {title}
                 </h2>
             </div>
+            <p className='flex mt-6 text-[32px] font-extrabold'>
+                <span>
+                    {price}
+                </span>
+            </p>
         </div>
     )
 }
