@@ -23,6 +23,13 @@ const PhoneCard = ({ phone }: PhoneCardProps) => {
                     {price}
                 </span>
             </p>
+            <div className='relative flex w-full mt-2'>
+                <div className='flex group-hover:invisible w-full justify-between text-gray'>
+                    <div className=''>
+
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
