@@ -5,7 +5,7 @@ const Hero = () => {
     const handleScroll = () => { }
     return (
         <div className='hero'>
-            <div className='flex-1 pt-36 pl-28 sm:pr-28'>
+            <div className='flex-1 pt-36 pl-20 sm:pr-28'>
                 <h1 className='hero__title'>
                     FutureTech Store: Explore the Latest Gadgets and Gizmos!
                 </h1>

@@ -13,7 +13,7 @@ const PhoneCard = ({ phone }: PhoneCardProps) => {
     return (
         <div className='car-card group'>
             <div className='car-car__content'>
-                <img src={image} className="ml-20" width={120} height={120} alt="data-image"/>
+                <img src={image} className="mb-10" width={150} height={150} alt="data-image"/>
                 <h2 className='car-card__content-title '>
                     {title}
                 </h2>
@@ -25,8 +25,8 @@ const PhoneCard = ({ phone }: PhoneCardProps) => {
             </p>
             <div className='relative flex w-full mt-2'>
                 <div className='flex group-hover:invisible w-full justify-between text-gray'>
-                    <div className=''>
-
+                    <div className='' >
+                    
                     </div>
                 </div>
             </div>
