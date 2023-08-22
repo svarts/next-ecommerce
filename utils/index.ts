@@ -21,24 +21,3 @@ export async function fetchPhones() {
     }
     return result;
 }
-
-
-const fetch = require('node-fetch');
-
-const url = 'https://device-specs1.p.rapidapi.com/laptops';
-const options = {
-  method: 'GET',
-  headers: {
-    Authorization: '<REQUIRED>',
-    'X-RapidAPI-Key': 'ee35a48e96msh2feab49f111e3ccp10f7cejsn92f758fd4ef9',
-    'X-RapidAPI-Host': 'device-specs1.p.rapidapi.com'
-  }
-};
-
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
