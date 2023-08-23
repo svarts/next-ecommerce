@@ -18,4 +18,5 @@ export interface PhoneProps {
     title:string;
     price:number;
     year:number; 
+    description: string;
 }
